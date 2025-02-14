@@ -308,3 +308,48 @@ p.text-start {
     max-width: 450px;
     height: auto;
 }
+
+
+/* 更新情報バーのデザイン */
+.accordion-button {
+    width: 100%;
+    /* 親要素の幅いっぱいにする */
+    text-align: left;
+    /* テキストを左寄せ（デフォルトの中央揃えを変更） */
+    padding: 5px 15px;
+    /* パディングを調整 */
+    display: block;
+    /* インライン要素からブロック要素に変更 */
+    background-color: #e2eafc;
+    /* 薄い黄色 */
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 200%;
+}
+
+/* アコーディオン全体の幅を .content の幅に揃える */
+.content .accordion {
+    width: 100%;
+    /* 親要素の幅いっぱいに */
+}
+
+/* 各アコーディオンアイテムの幅を100%に */
+.content .accordion-item {
+    width: 100%;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 200%;
+}
+
+.accordion-button:hover {
+    background-color: #ffd819;
+    /* ホバー時に濃い黄色 */
+}
+
+.accordion-body {
+    background-color: whitesmoke;
+    padding: 5px 10px;
+    /* 少しクリーム色に */
+}
