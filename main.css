@@ -29,7 +29,7 @@ body {
 /* 通常時のナビゲーションリンク */
 .navbar-nav .nav-link {
     color: whitesmoke !important;
-    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     /* 最小 0.8rem, 推奨 1.5vw, 最大 1.2rem */
     font-weight: 500;
@@ -58,6 +58,7 @@ body {
 
 .dropdown-item {
     color: whitesmoke;
+    transition: transform 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 .dropdown-item:hover {
