@@ -121,7 +121,7 @@ body {
     padding: 5px 20px;
     /* 余白を調整 */
     margin: 20px 10px 10px 10px;
-    background: url('東医体/banner.png') no-repeat center center;
+    background: url('banner.png') no-repeat center center;
     background-size: cover;
     background-position: center;
     max-width: calc(100% - 20px);
