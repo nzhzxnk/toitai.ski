@@ -1,0 +1,309 @@
+html,
+body,
+footer {
+    background-color: #e7ecef;
+    font-family: 'Zen Kaku Gothic New';
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    line-height: 200%;
+}
+
+
+body {
+    padding-top: 50px;
+    /* 通常のページには適用 */
+}
+
+#home {
+    padding-top: 0;
+    /* index.html では適用しない */
+}
+
+#main-navbar,
+#navbar-contents {
+    background-color: #00296b !important;
+    color: whitesmoke;
+}
+
+/* 通常時のナビゲーションリンク */
+.navbar-nav .nav-link {
+    color: whitesmoke !important;
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    /* 最小 0.8rem, 推奨 1.5vw, 最大 1.2rem */
+    font-weight: 500;
+}
+
+/* ホバー時のスタイル */
+.navbar-nav .nav-link:hover {
+    color: #ffd500 !important;
+    transform: translateY(-0.2em);
+}
+
+.navbar-brand {
+    font-size: clamp(0.9rem, 1.75vw, 1.5rem);
+    /* 最小 0.8rem, 推奨 1.5vw, 最大 1.2rem */
+    ;
+    font-weight: 500;
+    padding: 1px 1px;
+    letter-spacing: 1px;
+    margin: 0 15px;
+}
+
+.offcanvas .dropdown-menu {
+    background-color: #00296b !important;
+    border: none;
+}
+
+.dropdown-item {
+    color: whitesmoke;
+}
+
+.dropdown-item:hover {
+    background-color: #00296b;
+    color: #ffd500 !important;
+    transform: translateY(-0.2em);
+}
+
+.offcanvas {
+    width: clamp(220px, 30vw, 100vw) !important;
+}
+
+#main-navbar {
+    padding: 6px;
+}
+
+.navbar-toggler {
+    padding: 0;
+    border: none;
+}
+
+.navbar-toggler-icon {
+    width: 30px;
+    height: 30px;
+    vertical-align: baseline;
+}
+
+@media (max-width: 650px) {
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navbar-toggler-icon {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+.container-fluid {
+    padding: 0 !important;
+}
+
+.img-fluid {
+    padding: 0 !important;
+}
+
+.index {
+    display: flex;
+    align-items: center;
+    /* 垂直中央揃え */
+    justify-content: start;
+    /* 左寄せ */
+    float: none;
+    color: whitesmoke;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 20px;
+    /* 余白を調整 */
+    margin: 20px 10px 10px 10px;
+    background: url('/Users/hayashiayano/Desktop/VScode/東医体/banner.png') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    max-width: calc(100% - 20px);
+    /* 左右に余白を確保 */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    /* 左寄せ */
+    float: none;
+    padding: 5px 5px;
+    /* 余白を調整 */
+    margin: 10px;
+    max-width: calc(100% - 20px);
+    /* 左右に余白を確保 */
+}
+
+p.text-start {
+    margin: 5px 0;
+    /* 上下5pxのマージンを追加 */
+    padding: 0;
+}
+
+/* スクロール時に余白を確保 */
+.styled-table-wrapper {
+    display: block;
+    overflow-x: auto;
+    /* 水平方向スクロール */
+    max-width: 100%;
+    padding: 15px;
+    /* 余白を追加 */
+    margin: 0 auto;
+    /* 中央揃え */
+}
+
+/* 表全体のスタイル */
+.styled-table {
+    width: 1000px;
+    /* 幅を固定 */
+    border-collapse: collapse;
+    margin: 0 auto;
+    /* 表自体も中央配置 */
+    table-layout: fixed;
+    /* 列幅を固定 */
+}
+
+/* ヘッダー・セルのフォントサイズと配置 */
+.styled-table th,
+.styled-table td {
+    font-size: 0.9rem;
+    /* 文字の大きさを固定 */
+    border: 1px solid #00296b;
+    padding: 3px;
+    text-align: center;
+    white-space: nowrap;
+    /* 折り返し防止 */
+    font-weight: 400;
+}
+
+/* ボディの背景色 */
+.styled-table tbody {
+    background-color: whitesmoke;
+}
+
+
+/* 最初の列の幅を調整 */
+.styled-table td:first-child {
+    width: 150px;
+    background-color: #e2eafc;
+    font-weight: 400;
+    /* 左端の列を小さく */
+}
+
+/* 最初の列の幅を調整 */
+.styled-table th:first-child {
+    width: 150px;
+    background-color: #00509d;
+    color: white;
+    /* 左端の列を小さく */
+}
+
+/* 他の列の幅を均等にする */
+.styled-table th:not(:first-child),
+.styled-table td:not(:first-child) {
+    width: calc((1050px - 150px) / 8);
+    /* 残りの列を均等に */
+}
+
+/* ヘッダー背景色 */
+.styled-table thead {
+    background-color: #00509d;
+    color: white;
+}
+
+/* 表が画面に収まらない場合スクロール */
+@media (max-width: 1100px) {
+    .styled-table {
+        width: 850px;
+        /* 幅を調整 */
+    }
+
+    .styled-table-wrapper {
+        overflow-x: scroll;
+        padding: 10px;
+        /* 余白を確保 */
+    }
+}
+
+.universities {
+    list-style: none;
+}
+
+.breadcrumb {
+    background-color: #ffd819;
+    padding: 5px;
+    margin: 10px 0px;
+
+}
+
+.breadcrumb-item a {
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+.image-container {
+    background-color: whitesmoke;
+    padding: 3px;
+    /* 余白をつける */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.customspace-s {
+    display: inline-block;
+    margin-right: 10px;
+    /* 右側の余白 */
+}
+
+.customspace-m {
+    display: inline-block;
+    margin-right: 20px;
+    /* 右側の余白 */
+}
+
+.message-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 右寄せ */
+    align-items: flex-end;
+    /* 垂直中央揃え */
+}
+
+.message-name {
+    text-align: end;
+    font-weight: 500;
+}
+
+.img-thumbnail {
+    display: block;
+    margin-left: auto;
+    width: 15%;
+    height: auto;
+}
+
+.sub-index {
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.content-img {
+    display: block;
+    margin-right: auto;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
