@@ -353,3 +353,12 @@ p.text-start {
     padding: 5px 10px;
     /* 少しクリーム色に */
 }
+
+.content3 {
+    float: none;
+    padding: 5px 5px;
+    /* 余白を調整 */
+    margin: 10px;
+    max-width: calc(100% - 20px);
+    /* 左右に余白を確保 */
+}
