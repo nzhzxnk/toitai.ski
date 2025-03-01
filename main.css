@@ -236,6 +236,7 @@ p.text-start {
 
 .universities {
     list-style: none;
+    font-size: 0.75rem;
 }
 
 .breadcrumb {
@@ -292,7 +293,7 @@ p.text-start {
 .img-thumbnail {
     display: block;
     margin-left: auto;
-    width: 15%;
+    width: 20%;
     height: auto;
 }
 
@@ -363,17 +364,3 @@ p.text-start {
     /* 左右に余白を確保 */
 }
 
-/* 画像をスクロール可能なエリアに収める */
-.startlist {
-    width: 100%;  /* 画面幅いっぱい */
-    height: 100vh; /* 画面の高さに合わせる */
-    overflow-y: scroll; /* 縦スクロールを有効化 */
-    -webkit-overflow-scrolling: touch; /* スマホでスムーズスクロール */
-}
-
-/* 画像を横幅いっぱいに表示 */
-.startlist img {
-    width: 100%; /* 幅いっぱい */
-    height: auto; /* 縦横比を維持 */
-    display: block; /* 余計な余白を消す */
-}
