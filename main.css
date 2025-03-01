@@ -293,7 +293,7 @@ p.text-start {
 .img-thumbnail {
     display: block;
     margin-left: auto;
-    width: 20%;
+    width: 15%;
     height: auto;
 }
 
@@ -355,12 +355,4 @@ p.text-start {
     /* 少しクリーム色に */
 }
 
-.content3 {
-    float: none;
-    padding: 5px 5px;
-    /* 余白を調整 */
-    margin: 10px;
-    max-width: calc(100% - 20px);
-    /* 左右に余白を確保 */
-}
 
