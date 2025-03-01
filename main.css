@@ -119,7 +119,7 @@ body {
     font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     font-weight: 500;
     letter-spacing: 1px;
-    padding: 5px 20px;
+    padding: 5px 3vw;
     /* 余白を調整 */
     margin: 20px 10px 10px 10px;
     background: url('banner.png') no-repeat center center;
@@ -355,4 +355,7 @@ p.text-start {
     /* 少しクリーム色に */
 }
 
-
+.content:not(:has(ul, ol)) {
+    padding: 0px 15px;
+    /* 追加したい値 */
+}
