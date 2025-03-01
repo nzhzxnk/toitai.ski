@@ -234,9 +234,21 @@ p.text-start {
     }
 }
 
-.universities {
+.universities>ul {
     list-style: none;
+    text-align: start;
+    padding: 0;
+    margin: 0;
+    /* 余白を調整 */
+    max-width: calc(100% - 20px);
     font-size: 0.75rem;
+}
+
+.universities {
+    padding: 0;
+    margin: 0;
+    /* 余白を調整 */
+    max-width: calc(100% - 20px);
 }
 
 .breadcrumb {

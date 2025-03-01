@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索結果</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">第67回東医体スキー競技</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <h2>検索結果</h2>
+        <p id="searchQuery"></p>
+        <ul id="searchResults" class="list-group"></ul>
+    </main>
+
+    <script>
+        function getQueryParam(param) {
+            let urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function searchContent() {
+            let query = getQueryParam("q");
+            if (!query) {
+                document.getElementById("searchQuery").innerText = "検索ワードが指定されていません";
+                return;
+            }
+
+            document.getElementById("searchQuery").innerText = `「${query}」の検索結果`;
+
+            // `index.html` から取得したいデータを定義（検索対象）
+            let pages = [
+                { title: "大会概要", url: "overview.html", content: "東日本医科学生総合体育大会スキー競技の概要" },
+                { title: "競技日程", url: "schedule.html", content: "競技の日程と詳細" },
+                { title: "アルペン競技", url: "alpine.html", content: "アルペン競技のコースやリフト情報" },
+                { title: "クロスカントリー競技", url: "crosscountry.html", content: "クロスカントリー競技のスケジュールやスタートリスト" },
+                { title: "リザルト", url: "result.html", content: "競技結果と順位表" },
+                { title: "DS受付", url: "dscheck.html", content: "ドクターストップ受付フォーム" },
+                { title: "緊急時の対応", url: "emergency.html", content: "緊急時の対応と連絡先" },
+                { title: "アクセスマップ", url: "access.html", content: "大会会場のアクセス方法" }
+            ];
+
+            let resultsContainer = document.getElementById("searchResults");
+            resultsContainer.innerHTML = "";
+
+            let results = pages.filter(page => page.content.includes(query));
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = "<li class='list-group-item'>該当なし</li>";
+            } else {
+                results.forEach(result => {
+                    let listItem = document.createElement("li");
+                    listItem.className = "list-group-item list-group-item-action";
+                    listItem.innerHTML = `<a href="${result.url}" class="text-decoration-none">${result.title}</a>`;
+                    resultsContainer.appendChild(listItem);
+                });
+            }
+        }
+
+        window.onload = searchContent;
+    </script>
+
+</body>
+
+</html>
